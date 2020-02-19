@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page in building</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/page.css">
+
+  <meta name="theme-color" content="#fafaff">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div id="page">
+    <div id="banner">
+      <img id="logo" alt="logo"/>
+      <div id="page_header">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas.
+      </div>
+    </div>
+    <ul id="menu">
+      <li onclick="scrollToId('about')">O nas</li>
+      <li onclick="scrollToId('first_service')">Usługi</li>
+      <li onclick="scrollToId('contact')">Adres</li>
+      <li onclick="scrollToId('form')">Kontakt</li>
+    </ul>
+    <div id="about">
+      <p>O nas</p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas. Nunc ullamcorper purus dolor, ut accumsan metus dapibus a. Cras tristique sodales libero, sit amet interdum nunc fringilla non. Proin consequat tortor eget eleifend dignissim.
+    </div>
+    <div id="first_service" class="module">
+      <img alt="service"/>
+      <div>
+        <div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas. Nunc ullamcorper purus dolor, ut accumsan metus dapibus a. Cras tristique sodales libero, sit amet interdum nunc fringilla non.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module">
+      <div>
+        <div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas. Nunc ullamcorper purus dolor, ut accumsan metus dapibus a. Cras tristique sodales libero, sit amet interdum nunc fringilla non.
+          </div>
+        </div>
+      </div>
+      <img alt="service"/>
+    </div>
+    <div class="module">
+      <img alt="service"/>
+      <div>
+        <div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas. Nunc ullamcorper purus dolor, ut accumsan metus dapibus a. Cras tristique sodales libero, sit amet interdum nunc fringilla non.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div id="contact_data">
+        <p>Adres</p>
+        <span>Firma przykładowa</span>
+        <span>ul. konieczna 1</span>
+        <span>40-300 Przykład</span>
+        <span>E-mail: <a href="mailto:test@example.com"> przykładowy@email.com</a></span>
+        <span>Telefon: <a href="tel:909090909" >909090909</a></span>
+      </div>
+      <div id="map">
+          <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+    <form id="form" onsubmit="sendEmail()">
+      <div>
+        <p>Kontakt</p>
+        <label>
+          Imię i Nazwisko
+          <input type="text" name="name">
+        </label>
+        <label>
+          Temat
+          <input type="text" name="topic">
+        </label>
+        <label>
+          Treść
+          <textarea></textarea>
+        </label>
+        <input value="Wyślij" type="submit"/>
+      </div>
+    </form>
+    <div id="footer">
+      <a href="#">Lorem ipsum dolor sit amet</a>
+      <a>consectetur adipiscing elit</a>
+      <a>Praesent eu lectus vestibulum</a>
+      <a>Lorem ipsum dolor sit amet</a>
+      <a>neque ornare egestas</a>
+      <a>consectetur adipiscing elit</a>
+    </div>
+  </div>
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  -->
+</body>
+
+</html>
