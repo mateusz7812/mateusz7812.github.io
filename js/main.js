@@ -1,6 +1,9 @@
 function scrollToId(id){
   const element = document.getElementById(id);
-  const offset = 80;
+  const width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+  const offset = ((width > 800) ? 80 : 0);
   const bodyRect = document.body.getBoundingClientRect().top;
   const elementRect = element.getBoundingClientRect().top;
   const elementPosition = elementRect - bodyRect;
