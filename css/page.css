@@ -1,9 +1,11 @@
-#page{
-  border: 2px solid black;
-  width: 1200px;
-  margin: 0 auto;
-  min-height: 100vh;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@1,800&display=swap');
+
+:root{
+  --dark_background_color: #222;
+  --light_background_color: #ddd;
+  --main_color: #052D52;
+  --light_font_color: white;
+  --dark_font_color: black;
 }
 
 p{
@@ -11,48 +13,82 @@ p{
   margin: 0;
 }
 
+a{
+  color: var(--light_font_color);
+}
+
+body{
+  background-color: var(--light_background_color);
+  color: var(--light_font_color);
+}
+
 #banner{
   position: relative;
   border: 2px solid green;
   box-sizing: border-box;
-  height: 500px;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#banner_img{
+  margin: 0;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 600px;
+  z-index: -1;
 }
 
 .page>*{
   width: 100%;
 }
 
-#logo{
+#logo_container{
+  position: relative;;
   display: block;
-  width: 300px;
-  height: 200px;
+  height: 40vh;
+  width: -moz-fit-content;
   border: 2px solid blueviolet;
   box-sizing: border-box;
+  padding: 10px;
+  margin-left: 10vw;
+  background-color: var(--light_background_color);
+  box-shadow: black 0 0  10px 3px, white 0 0 20px 5px inset;
+}
+
+#logo{
+  height: 100%;
 }
 
 #page_header{
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 700px;
+  width: 70vw;
   text-align: right;
   border: 2px solid brown;
   box-sizing: border-box;
-  font-size: xx-large;
-  padding: 1em;
+  font-size: 4vw;
+  padding: 0 5vw 5vh 0;
+  font-family: 'Spectral SC', serif;
+  color: var(--light_font_color);
+  text-shadow: 3px 0 0 black;
 }
 
 
 #menu{
+  background-color: var(--main_color);
   position: sticky;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 10vh;
   border: 2px solid lawngreen;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0 10vw;
   display: table;
+  box-shadow: black 0 0  10px 3px;
+  font-size: 4vh;
+  z-index: 10;
 }
 
 #menu>li{
@@ -69,32 +105,49 @@ p{
   display: table-cell;
   vertical-align: middle;
   text-align: justify;
-  padding: 2vw 3vw;
+  padding: 6vw 10vw;
   box-sizing: border-box;
   font-size: 23px;
+  background-color: var(--dark_background_color);
 }
 
 .module{
+  position: relative;;
+  width: 80%;
+  margin: 5vh auto;
   height: 500px;
   border: 2px solid darkgoldenrod;
   box-sizing: border-box;
-}
-
-.module>div, .module>img{
-  float: left
-}
-
-.module>img{
-  display: block;
-  width: 60%;
-  height: 100%;
-  border: 2px solid lawngreen;
-  box-sizing: border-box;
+  background-color: var(--dark_background_color);
 }
 
 .module>div{
+  float: left
+}
+
+.service_image_container{
   position: relative;
-  width: 40%;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 2px solid lawngreen;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.service_image_container>img{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.service_description_container{
+  position: relative;
+  width: 50%;
   height:  100%;
   border: 2px solid blue;
   box-sizing: border-box;
@@ -106,7 +159,7 @@ p{
   clear: both;
 }
 
-.module>div>div {
+.service_description_container>div {
   display: block;
   width: 100%;
   height: 100%;
@@ -114,7 +167,7 @@ p{
   box-sizing: border-box;
 }
 
-.module>div>div>div {
+.service_description_container>div>div {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -124,17 +177,18 @@ p{
   text-align: justify;
 }
 
-#contact{
-  height: 400px;
+#address{
+  height: 600px;
   border: 2px solid navy;
   box-sizing: border-box;
+  background-color: var(--dark_background_color);
 }
 
-#contact>div{
+#address>div{
   float: left;
 }
 
-#contact_data{
+#address_data{
   display: flex;
   justify-content: center;
   width: 50%;
@@ -147,15 +201,15 @@ p{
   line-height: 1.5em;
 }
 
-#contact_data> *{
+#address_data> *{
   display: inline;
 }
 
-#contact_data>p{
+#address_data>p{
   font-size: 30px;
 }
 
-#contact:after{
+#address:after{
   content: "";
   display: block;
   clear: both;
@@ -173,8 +227,21 @@ p{
   height: 100%;
 }
 
+#contact{
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  margin: 5vh 0;
+  background-color: var(--dark_background_color);
+  overflow: hidden;
+}
+
 #form{
+  width: 60%;
   display: block;
+  float: right;
   height: 600px;
   border: 2px solid navy;
   box-sizing: border-box;
@@ -211,11 +278,56 @@ p{
   resize: none;
 }
 
+#contact_description{
+  position: relative;
+  float: right;
+  width: 40%;
+  height: 600px;
+  border: orchid 1px;
+  overflow: hidden;
+
+  font-family: 'Spectral SC', serif;
+  text-shadow: 3px 0 0 black;
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+#contact_description>div {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 40px 8%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+#contact_description>div>div {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+#contact_description>img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  max-height: 100vh;
+  z-index: -1;
+}
+
 #footer{
+  background-color: var(--main_color);
   border: 2px solid black;
   box-sizing: border-box;
   font-size: 20px;
-  padding: 20px 25px;
+  padding: 25px 20vw;
   columns: 250px 3;
   text-align: center;
   line-height: 40px;
@@ -227,61 +339,47 @@ p{
   width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
-  #page{
-    width: 100%;
-  }
-
-  #about{
-    font-size: 20px;
-    padding: 40px;
-  }
-
-  .module>div>div>div {
-    font-size: 25px;
-  }
-
-  }
-
 @media only screen and (max-width: 800px) {
 
   #page_header{
     width: 100%;
-    font-size: x-large;
+    font-size: 6vw;
+    margin: 0;
   }
 
-  .module>div, .module>img{
+  .module>div{
     float: none;
     clear: both;
+    width: 100%;
+    height: fit-content;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+  }
+
+  .service_image_container{
+    min-height: 70vh;
+  }
+
+  .module{
     width: 100%;
     height: fit-content;
     height:-moz-fit-content;
     height:-webkit-fit-content;
   }
 
-  .module>img{
-    height: 300px;
-  }
-
-  .module{
-    height: fit-content;
-    height:-moz-fit-content;
-    height:-webkit-fit-content;
-  }
-
-  .module>div>div{
+  .service_description_container>div{
     width: auto;
     height: auto;
   }
 
-  #contact_data{
+  #address_data{
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
     height: auto;
   }
 
-  #contact{
+  #address{
     height: auto;
   }
 
@@ -291,12 +389,23 @@ p{
 
   #menu{
     position: fixed;
-    height: 8vh;
+    height: 10vh;
     top: unset;
     bottom: 0;
+    padding: 0;
   }
 
-  #page{
+  #contact_description{
+    font-size: 4vh;
+    width: 100%;
+    height: 70vh;
+  }
+
+  #form{
+    width: 100%;
+  }
+
+  #footer{
     margin-bottom: 8vh;
   }
 }

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/themes/dark.css">
 
   <meta name="theme-color" content="#fafaff">
 </head>
@@ -22,35 +23,39 @@
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <div id="page">
     <div id="banner">
-      <img id="logo" alt="logo"/>
+      <img id="banner_img" src="img/AdobeStock_281752010_Preview.jpeg" alt="background photo"/>
+      <div id="logo_container">
+        <img id="logo" alt="logo" src="img/logo.png"/>
+      </div>
       <div id="page_header">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas.
+        <span>Lorem ipsum dolor sit amet.</span><br/> <span>Praesent eu lectus vestibulum neque ornare egestas.</span>
       </div>
     </div>
     <ul id="menu">
       <li onclick="scrollToId('about')">O nas</li>
       <li onclick="scrollToId('first_service')">Usługi</li>
-      <li onclick="scrollToId('contact')">Adres</li>
-      <li onclick="scrollToId('form')">Kontakt</li>
+      <li onclick="scrollToId('address')">Adres</li>
+      <li onclick="scrollToId('contact')">Kontakt</li>
     </ul>
     <div id="about">
       <p>O nas</p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas. Nunc ullamcorper purus dolor, ut accumsan metus dapibus a. Cras tristique sodales libero, sit amet interdum nunc fringilla non. Proin consequat tortor eget eleifend dignissim.
     </div>
     <div id="first_service" class="module">
-      <img alt="service"/>
-      <div>
+      <div class="service_image_container">
+        <img src="img/industry-worker-welding-iron-pieces-600w-1381444703.jpg" alt="img"/>
+      </div>
+      <div class="service_description_container">
         <div>
           <div>
-            Spawania: Tig , MIG Mag, Elektroda
+            Spawania: Tig , MIG Mag, Elektroda Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
           </div>
         </div>
       </div>
     </div>
     <div class="module">
-      <div>
+      <div class="service_description_container">
         <div>
           <div>
             Ogrodzenia
@@ -58,34 +63,43 @@
             Balustrady
             Drzwi
             Konstrukcje
+            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
           </div>
         </div>
       </div>
-      <img alt="service"/>
+      <div class="service_image_container">
+        <img alt="service" src="img/worker-grinding-iron-metal-polish-600w-1693928647.jpg"/>
+      </div>
     </div>
     <div class="module">
-      <img alt="service"/>
-      <div>
+      <div class="service_image_container">
+        <img alt="service" src="img/500_F_334786040_WxdYkXnXBwqtOJR7kUqkbVfgHtMXTLuq.jpg"/>
+      </div>
+      <div class="service_description_container">
         <div>
           <div>
             Maszyny Rolnicze oraz budowlane
+            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
           </div>
         </div>
       </div>
     </div>
     <div class="module">
-      <div>
+      <div class="service_description_container">
         <div>
           <div>
             Ślusarstwo
             Cięcie Plazmą
+            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
           </div>
         </div>
       </div>
-      <img alt="service"/>
+      <div class="service_image_container">
+        <img alt="service" src="img/cutting-metal-plasma-equipment-600w-483869464.jpg"/>
+      </div>
     </div>
-    <div id="contact">
-      <div id="contact_data">
+    <div id="address">
+      <div id="address_data">
         <p>Adres</p>
         <a href="https://www.google.com/maps/place/Ryszewo+18A,+88-420/@52.6980981,17.707991,13z">Usługi I Naprawa Maszyn Mirosław Kania<br/>Ryszewo 18a<br/>88-420 Rogowo</a>
         <span>E-mail: <a href="mailto:test@example.com"> przykładowy@email.com</a></span>
@@ -94,6 +108,15 @@
       <div id="map">
           <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=ryszewo%2018a&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
+    </div>
+  <div id="contact">
+    <div id="contact_description">
+      <div>
+        <div>
+          Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
+        </div>
+      </div>
+      <img src="img/silver-and-black-metal-tools-4480533.jpg" alt="background photo"/>
     </div>
     <form id="form" onsubmit="sendEmail()">
       <div>
@@ -113,6 +136,7 @@
         <input value="Wyślij" type="submit"/>
       </div>
     </form>
+  </div>
     <div id="footer">
       <a href="#">Lorem ipsum dolor sit amet</a>
       <a>consectetur adipiscing elit</a>
@@ -121,7 +145,6 @@
       <a>neque ornare egestas</a>
       <a>consectetur adipiscing elit</a>
     </div>
-  </div>
 
   <!-- Add your site or application content here -->
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
