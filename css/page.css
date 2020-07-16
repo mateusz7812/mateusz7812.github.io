@@ -52,10 +52,10 @@ body > * {
 }
 
 #logo_container {
-  position: relative;;
+  position: relative;
   display: block;
-  height: 40vh;
-  width: -moz-fit-content;
+  width: 300px;
+  max-width: 80vw;
   box-sizing: border-box;
   padding: 10px;
   margin-left: 10vw;
@@ -64,7 +64,7 @@ body > * {
 }
 
 #logo {
-  height: 100%;
+  max-width: 100%;
   filter: invert(100%);
 }
 
@@ -117,17 +117,21 @@ body > * {
   display: table-cell;
   vertical-align: middle;
   text-align: justify;
-  padding: 6vw 10vw;
+  padding: 3vh 10vw 10vh 10vw;
   box-sizing: border-box;
   font-size: 26px;
   background-color: var(--light_background_color);
   box-shadow: 0 0 10px 0 var(--dark_background_color) inset;
 }
 
-#services_header {
+#about h1{
+  margin-bottom: 3%;
+}
+
+.headers{
   text-align: center;
-  margin: 10vh 0 7vh 0;
-  font-size: 7vh;
+  font-size: 40px;
+  margin: 5% 0 0 0;
 }
 
 .module {
@@ -226,8 +230,19 @@ body > * {
   box-sizing: border-box;
   flex-direction: column;
   font-size: 26px;
-  padding-left: 8%;
   line-height: 1.5em;
+}
+
+#address_data h1{
+  margin-bottom: 10%;
+}
+
+#address_data span{
+  display: block;
+}
+
+#address_data>p{
+  padding-left: 15%;
 }
 
 #address_data > * {
@@ -277,9 +292,9 @@ body > * {
   width: 60%;
   display: block;
   float: right;
-  height: 600px;
+  height: 500px;
   box-sizing: border-box;
-  padding: 50px 0;
+  padding: 0 0 50px 0;
 }
 
 #form label {
@@ -316,7 +331,7 @@ body > * {
   position: relative;
   float: right;
   width: 40%;
-  height: 600px;
+  height: 500px;
   overflow: hidden;
   font-size: 5vh;
 }
@@ -369,9 +384,13 @@ body > * {
 
 @media only screen and (max-width: 800px) {
 
+  #logo_container{
+    margin: auto auto;
+  }
+
   #page_header {
     width: 100%;
-    font-size: 6vw;
+    font-size: 6vh;
     margin: 0;
   }
 
@@ -385,11 +404,11 @@ body > * {
   }
 
   .service_image_container {
-    min-height: 70vh;
+    min-height: 50vh;
   }
 
   .module {
-    width: 100%;
+    width: 90%;
     height: fit-content;
     height: -moz-fit-content;
     height: -webkit-fit-content;
@@ -426,7 +445,9 @@ body > * {
   #contact_description {
     font-size: 4vh;
     width: 100%;
-    height: 70vh;
+    height: fit-content;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
   }
 
   #form {

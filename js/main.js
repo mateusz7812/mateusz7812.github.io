@@ -17,11 +17,11 @@ function scrollToId(id){
 
 function mapsSelector() {
   if /* if we're on iOS, open in Apple Maps */
-  ((navigator.platform.indexOf("iPhone") != -1) ||
-    (navigator.platform.indexOf("iPad") != -1) ||
-    (navigator.platform.indexOf("iPod") != -1))
-    window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");else /* else use Google */
-    window.open("https://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+  ((navigator.platform.indexOf("iPhone") !== -1) ||
+    (navigator.platform.indexOf("iPad") !== -1) ||
+    (navigator.platform.indexOf("iPod") !== -1))
+    window.open("maps://www.google.com/maps/place/Ryszewo+18A,+88-420/@52.6980981,17.707991,13z");else /* else use Google */
+    window.open("https://www.google.com/maps/place/Ryszewo+18A,+88-420/@52.6980981,17.707991,13z");
 }
 
 function sendEmail() {

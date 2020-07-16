@@ -34,16 +34,16 @@
     </div>
     <ul id="menu">
       <li onclick="scrollToId('about')">O nas</li>
-      <li onclick="scrollToId('first_service')">Usługi</li>
+      <li onclick="scrollToId('services')">Usługi</li>
       <li onclick="scrollToId('address')">Adres</li>
       <li onclick="scrollToId('contact')">Kontakt</li>
     </ul>
     <div id="about">
-      <p>O nas</p>
+      <h1 class="headers">O nas</h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lectus vestibulum neque ornare egestas. Nunc ullamcorper purus dolor, ut accumsan metus dapibus a. Cras tristique sodales libero, sit amet interdum nunc fringilla non. Proin consequat tortor eget eleifend dignissim.
     </div>
-  <h1 id="services_header">Usługi</h1>
-    <div id="first_service" class="module">
+  <h1 id="services" class="headers">Usługi</h1>
+    <div class="module">
       <div class="service_image_container">
         <img src="img/industry-worker-welding-iron-pieces-600w-1381444703.jpg" alt="img"/>
       </div>
@@ -101,16 +101,19 @@
     </div>
     <div id="address">
       <div id="address_data">
-        <p>Adres</p>
-        <a href="https://www.google.com/maps/place/Ryszewo+18A,+88-420/@52.6980981,17.707991,13z">Usługi I Naprawa Maszyn Mirosław Kania<br/>Ryszewo 18a<br/>88-420 Rogowo</a>
-        <span>E-mail: <a href="mailto:test@example.com"> przykładowy@email.com</a></span>
-        <span>Telefon: <a href="tel:909090909" >909090909</a></span>
+        <h1 class="headers">Adres</h1>
+        <p>
+          <span onclick="mapsSelector()">Usługi I Naprawa Maszyn Mirosław Kania<br/>Ryszewo 18a<br/>88-420 Rogowo</span>
+          <span>E-mail: <a href="mailto:test@example.com"> przykładowy@email.com</a></span>
+          <span>Telefon: <a href="tel:909090909" >909090909</a></span>
+        </p>
       </div>
       <div id="map">
           <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=ryszewo%2018a&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
     </div>
   <div id="contact">
+    <h1 class="headers">Kontakt</h1>
     <div id="contact_description">
       <div>
         <div>
@@ -120,7 +123,7 @@
     </div>
     <form id="form" onsubmit="sendEmail()">
       <div>
-        <p>Kontakt</p>
+
         <label>
           Imię i Nazwisko
           <input type="text" name="name">
