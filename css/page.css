@@ -43,7 +43,10 @@ html {
   margin: 0;
   position: absolute;
   min-width: 100vw;
-  min-height: 600px;
+  min-height: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -176,8 +179,9 @@ body > * {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .service_description_container {
