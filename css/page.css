@@ -42,12 +42,13 @@ html {
 #banner_img {
   margin: 0;
   position: absolute;
-  min-width: 100vw;
-  min-height: 90vh;
+  width: 100vw;
+  height: 90vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  object-fit: cover;
 }
 
 body > * {
@@ -238,7 +239,7 @@ body > * {
 }
 
 #address_data h1{
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 #address_data span{
@@ -292,13 +293,17 @@ body > * {
   box-shadow: 0 0 10px 0 var(--dark_background_color) inset;
 }
 
+#contact-flex{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
 #form {
   width: 60%;
   display: block;
   float: right;
-  height: 500px;
   box-sizing: border-box;
-  padding: 0 0 50px 0;
 }
 
 #form label {
@@ -335,7 +340,6 @@ body > * {
   position: relative;
   float: right;
   width: 40%;
-  height: 500px;
   overflow: hidden;
   font-size: 5vh;
 }
@@ -344,14 +348,12 @@ body > * {
   position: relative;
   display: block;
   width: 100%;
-  height: 100%;
   padding: 40px 8%;
   box-sizing: border-box;
   z-index: 1;
 }
 
 #contact_description > div > div {
-  height: 100%;
   padding: 0;
   margin: 0;
   display: flex;
@@ -452,6 +454,10 @@ body > * {
     height: fit-content;
     height: -moz-fit-content;
     height: -webkit-fit-content;
+  }
+
+  #contact-flex{
+    display: block;
   }
 
   #form {
