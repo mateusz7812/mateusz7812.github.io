@@ -27,3 +27,18 @@ function mapsSelector() {
 function sendEmail() {
   window.open('mailto:test@example.com?subject=subject&body=body', "_self");
 }
+
+function updateForm(){
+  const element = document.getElementsByName("contact")[0];
+  console.log(element.value);
+  if(element.checked){
+    document.getElementById("tel_label").style.display = "block";
+    document.getElementById("email_label").style.display = "none";
+    console.log("1");
+  }
+  else{
+    document.getElementById("tel_label").style.display = "none";
+    document.getElementById("email_label").style.display = "block";
+    console.log("2");
+  }
+}

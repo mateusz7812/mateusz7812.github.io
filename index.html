@@ -19,152 +19,173 @@
   <meta name="theme-color" content="#fafaff">
 </head>
 
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-    <div id="banner">
-      <img id="banner_img" src="img/banner.jpeg" alt="background photo"/>
-      <div id="logo_container">
-        <img id="logo" alt="logo" src="img/logo.png"/>
+<body onload="updateForm()">
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<div id="banner">
+  <img id="banner_img" src="img/banner.jpeg" alt="background photo"/>
+  <div id="logo_container">
+    <img id="logo" alt="logo" src="img/logo.png"/>
+  </div>
+  <div id="page_header">
+    <span>Usługi i Naprawa Maszyn</span><br/> <span>Mirek Kania</span>
+  </div>
+</div>
+<ul id="menu">
+  <li onclick="scrollToId('about')">O nas</li>
+  <li onclick="scrollToId('services')">Usługi</li>
+  <li onclick="scrollToId('address')">Adres</li>
+  <li onclick="scrollToId('contact')">Kontakt</li>
+</ul>
+<div id="about">
+  <h1 class="headers">O nas</h1>
+  Firma Usługi i Naprawa Maszyn oferuje różnego rodzaju usługi takie jak: spawanie, usługi ślusarskie, ogrodzenia,
+  bramy,balustrady, naprawa maszyn rolniczych oraz budowlanych i inne. Firma dba o zadowolenie klienta i służy
+  kompleksowym doradztwem w takich aspektach jak projekt czy dobór materiałów. Materiały do zlecenia zakupuje zakład, po
+  wcześniejszej konsultacji, lub klient. Firmę cechuje rzetelność oraz indywidualne podejście do każdego zlecenia, przez
+  co usługi są najwyższej jakości.
+</div>
+<h1 id="services" class="headers">Usługi</h1>
+<div class="module">
+  <div class="service_image_container">
+    <img src="img/welding.jpg" alt="img"/>
+  </div>
+  <div class="service_description_container">
+    <div>
+      <div>
+        Oferowane metody spawalnicze: Tig , MIG Mag, Elektroda. Profesjonalizm oferowanej usługi potwierdzają
+        kwalifikacje i certyfikaty: < miejsce na certyfikaty >.
       </div>
-      <div id="page_header">
-        <span>Usługi i Naprawa Maszyn</span><br/> <span>Mirek Kania</span>
-      </div>
-    </div>
-    <ul id="menu">
-      <li onclick="scrollToId('about')">O nas</li>
-      <li onclick="scrollToId('services')">Usługi</li>
-      <li onclick="scrollToId('address')">Adres</li>
-      <li onclick="scrollToId('contact')">Kontakt</li>
-    </ul>
-    <div id="about">
-      <h1 class="headers">O nas</h1>
-      Firma Usługi i Naprawa Maszyn oferuje różnego rodzaju usługi takie jak: spawanie, usługi ślusarskie,  ogrodzenia, bramy,balustrady, naprawa maszyn rolniczych oraz budowlanych i inne. Firma dba o zadowolenie klienta i służy kompleksowym  doradztwem w takich aspektach jak projekt czy dobór materiałów. Materiały do zlecenia zakupuje zakład, po wcześniejszej konsultacji, lub klient. Firmę cechuje rzetelność oraz indywidualne podejście do każdego zlecenia, przez co usługi są najwyższej jakości.
-    </div>
-  <h1 id="services" class="headers">Usługi</h1>
-    <div class="module">
-      <div class="service_image_container">
-        <img src="img/welding.jpg" alt="img"/>
-      </div>
-      <div class="service_description_container">
-        <div>
-          <div>
-            Spawania: Tig , MIG Mag, Elektroda Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="module">
-      <div class="service_description_container">
-        <div>
-          <div>
-            Ogrodzenia
-            Bramy
-            Balustrady
-            Drzwi
-            Konstrukcje
-            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
-          </div>
-        </div>
-      </div>
-      <div class="service_image_container">
-        <img alt="service" src="img/polishing.jpg"/>
-      </div>
-    </div>
-    <div class="module">
-      <div class="service_image_container">
-        <img alt="service" src="img/screwing.jpeg"/>
-      </div>
-      <div class="service_description_container">
-        <div>
-          <div>
-            Maszyny Rolnicze oraz budowlane
-            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="module">
-      <div class="service_description_container">
-        <div>
-          <div>
-            Ślusarstwo
-            Cięcie Plazmą
-            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
-          </div>
-        </div>
-      </div>
-      <div class="service_image_container">
-        <img alt="service" src="img/cutting.jpg"/>
-      </div>
-    </div>
-    <div id="address">
-      <div id="address_data">
-        <h1 class="headers">Adres</h1>
-        <p>
-          <span onclick="mapsSelector()">Usługi I Naprawa Maszyn Mirosław Kania<br/>Ryszewo 18a<br/>88-420 Rogowo</span>
-          <span>E-mail: <a href="mailto:test@example.com"> przykładowy@email.com</a></span>
-          <span>Telefon: <a href="tel:909090909" >909090909</a></span>
-        </p>
-      </div>
-      <div id="map">
-          <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=ryszewo%2018a&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
-      </div>
-    </div>
-  <div id="contact">
-    <h1 class="headers">Kontakt</h1>
-    <div id="contact-flex">
-      <div id="contact_description">
-        <div>
-          <div>
-            Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus. Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
-          </div>
-        </div>
-      </div>
-      <form id="form" onsubmit="sendEmail()">
-        <div>
-
-          <label>
-            Imię i Nazwisko
-            <input type="text" name="name">
-          </label>
-          <label>
-            Temat
-            <input type="text" name="topic">
-          </label>
-          <label>
-            Treść
-            <textarea></textarea>
-          </label>
-          <input value="Wyślij" type="submit"/>
-        </div>
-      </form>
     </div>
   </div>
-    <div id="footer">
-      <a href="#">Lorem ipsum dolor sit amet</a>
-      <a>consectetur adipiscing elit</a>
-      <a>Praesent eu lectus vestibulum</a>
-      <a>Lorem ipsum dolor sit amet</a>
-      <a>neque ornare egestas</a>
-      <a>consectetur adipiscing elit</a>
+</div>
+<div class="module">
+  <div class="service_description_container">
+    <div>
+      <div>
+        Ogrodzenia
+        Bramy
+        Balustrady
+        Drzwi
+        Konstrukcje
+        Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus.
+        Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
+      </div>
     </div>
+  </div>
+  <div class="service_image_container">
+    <img alt="service" src="img/polishing.jpg"/>
+  </div>
+</div>
+<div class="module">
+  <div class="service_image_container">
+    <img alt="service" src="img/screwing.jpeg"/>
+  </div>
+  <div class="service_description_container">
+    <div>
+      <div>
+        Maszyny Rolnicze oraz budowlane
+        Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus.
+        Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="module">
+  <div class="service_description_container">
+    <div>
+      <div>
+        Ślusarstwo
+        Cięcie Plazmą
+        Nulla turpis neque, cursus a nibh ut, faucibus vulputate mauris. Maecenas a sodales dui, et fermentum risus.
+        Aliquam efficitur viverra nulla, varius ultricies nunc eleifend ac.
+      </div>
+    </div>
+  </div>
+  <div class="service_image_container">
+    <img alt="service" src="img/cutting.jpg"/>
+  </div>
+</div>
+<div id="address">
+  <div id="address_data">
+    <h1 class="headers">Adres</h1>
+    <p>
+      <span onclick="mapsSelector()">Usługi I Naprawa Maszyn Mirosław Kania<br/>Ryszewo 18a<br/>88-420 Rogowo</span>
+      <span>E-mail: <a href="mailto:test@example.com"> przykładowy@email.com</a></span>
+      <span>Telefon: <a href="tel:909090909">909090909</a></span>
+    </p>
+  </div>
+  <div id="map">
+    <iframe id="gmap_canvas"
+            src="https://maps.google.com/maps?q=ryszewo%2018a&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
+  </div>
+</div>
+<div id="contact">
+  <h1 class="headers">Kontakt</h1>
+  <div id="contact-flex">
+    <div id="contact_description">
+      <div>
+        <div>
+          Wierzymy, że indywidualne podejście do każdego zlecenia, zapewnia usługi najwyższej jakości, dlatego służymy
+          kompleksowym doradztwem. Zapraszamy do kontaktu.
+        </div>
+      </div>
+    </div>
+    <form id="form" onsubmit="sendEmail()">
+      <div>
+        <label>
+          Treść
+          <textarea></textarea>
+        </label>
+        <div>
+          <div>
+            <label onclick="updateForm()">
+              Forma kontaktu
+              <label><input type="radio" name="contact" value="tel" checked> Telefon</label>
+              <label><input type="radio" name="contact" value="email"> E-mail</label>
+            </label>
+          </div>
+          <div>
+            <label id="tel_label">
+              Telefon
+              <input type="text" name="tel">
+            </label>
+            <label id="email_label">
+              E-mail
+              <input type="email" name="mail">
+            </label></div>
+        </div>
+        <input value="Wyślij" type="submit"/>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="footer">
+  <a href="#">Lorem ipsum dolor sit amet</a>
+  <a>consectetur adipiscing elit</a>
+  <a>Praesent eu lectus vestibulum</a>
+  <a>Lorem ipsum dolor sit amet</a>
+  <a>neque ornare egestas</a>
+  <a>consectetur adipiscing elit</a>
+</div>
 
-  <!-- Add your site or application content here -->
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.8.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-  -->
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+-->
 </body>
 
 </html>
