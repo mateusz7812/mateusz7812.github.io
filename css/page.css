@@ -390,7 +390,7 @@ body > * {
 }
 
 #footer {
-  background-color: var(--main_color);
+  background-color: var(--dark_background_color);
   border: 2px solid black;
   box-sizing: border-box;
   font-size: 20px;
