@@ -14,11 +14,14 @@ p {
 }
 
 a {
+  color: #ddd;
   color: var(--light_font_color);
 }
 
 body {
+  background-color: #222;
   background-color: var(--dark_background_color);
+  color: #ddd;
   color: var(--light_font_color);
 }
 
@@ -63,6 +66,7 @@ body > * {
   box-sizing: border-box;
   padding: 10px;
   margin-left: 10vw;
+  background-color: #052D52;
   background-color: var(--main_color);
   box-shadow: black 0 0 10px 3px;
 }
@@ -82,12 +86,14 @@ body > * {
   font-size: 4vw;
   padding: 0 5vw 5vh 0;
   font-family: 'Spectral SC', serif;
+  color: #ddd;
   color: var(--light_font_color);
   text-shadow: 3px 0 0 black;
 }
 
 
 #menu {
+  background-color: #052D52;
   background-color: var(--main_color);
   position: sticky;
   top: 0;
@@ -111,11 +117,13 @@ body > * {
 }
 
 #menu > li:hover {
+  background-color: #222;
   background-color: var(--dark_background_color);
   box-shadow: 0 0 10px black;
 }
 
 #about {
+  color: black;
   color: var(--dark_font_color);
   height: 200px;
   display: table-cell;
@@ -124,7 +132,9 @@ body > * {
   padding: 3vh 10vw 10vh 10vw;
   box-sizing: border-box;
   font-size: 26px;
+  background-color: #ddd;
   background-color: var(--light_background_color);
+  box-shadow: 0 0 10px 0 #222 inset;
   box-shadow: 0 0 10px 0 var(--dark_background_color) inset;
 }
 
@@ -139,6 +149,7 @@ body > * {
 }
 
 .module {
+  background-color: #052D52;
   background-color: var(--main_color);
   position: relative;
   box-shadow: 0 0 10px 1px black;
@@ -219,6 +230,7 @@ body > * {
 #address {
   height: 600px;
   box-sizing: border-box;
+  background-color: #052D52;
   background-color: var(--main_color);
   box-shadow: 0 0 10px 1px black;
 }
@@ -282,14 +294,17 @@ body > * {
 }
 
 #contact {
+  color: #222;
   color: var(--dark_background_color);
   position: relative;
   width: 80%;
   height: fit-content;
   height: -moz-fit-content;
   height: -webkit-fit-content;
+  background-color: #ddd;
   background-color: var(--light_background_color);
   overflow: hidden;
+  box-shadow: 0 0 10px 0 #222 inset;
   box-shadow: 0 0 10px 0 var(--dark_background_color) inset;
   padding: 0 10vw 5vh 10vw;
 }
@@ -390,20 +405,18 @@ body > * {
 }
 
 #footer {
+  background-color: #222;
   background-color: var(--dark_background_color);
-  border: 2px solid black;
-  box-sizing: border-box;
   font-size: 20px;
-  padding: 25px 20vw;
-  columns: 250px 3;
-  text-align: center;
-  line-height: 40px;
+  padding: 25px 10vw;
+  box-sizing: border-box;
+  text-align: justify;
+  text-align-last: justify;
 }
 
 #footer > a {
-  border: 1px solid black;
   display: inline-block;
-  width: 100%;
+  position: relative;
 }
 
 @media only screen and (max-width: 800px) {
